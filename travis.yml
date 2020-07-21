@@ -1,0 +1,4 @@
+anguage: cpp
+rvm:
+ - 2.2
+ - jruby

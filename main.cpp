@@ -42,9 +42,9 @@ int main(int argc, char const* argv[])
             std::vector<std::string> v = split(line, '\t');
             ip_pool.push_back(split(v.at(0), '.'));
         }
-        for (int i = 0; i < ip_pool.size(); i++)
+        for (size_t i = 0; i < ip_pool.size(); i++)
         {
-            for (int j = 0; j < ip_pool.size()-1; j++)
+            for (size_t j = 0; j < ip_pool.size()-1; j++)
             {
                 if (std::stoi(ip_pool[j][0]) < std::stoi(ip_pool[j + 1][0])) {
                     std::vector<std::string> tmp = ip_pool[j];
@@ -86,23 +86,23 @@ int main(int argc, char const* argv[])
             }
             std::cout << std::endl;
         }
-        for (int i = 0; i < ip_pool.size(); i++)
+        for (size_t i = 0; i < ip_pool.size(); i++)
         {
             if (std::stoi(ip_pool[i][0]) == 1) {
                 std::cout << ip_pool[i][0] << "." << ip_pool[i][1] << "." << ip_pool[i][2] << "." << ip_pool[i][3] << std::endl;
             }
         }
 
-        for (int i = 0; i < ip_pool.size(); i++)
+        for (size_t i = 0; i < ip_pool.size(); i++)
         {
             if (std::stoi(ip_pool[i][0]) == 46 and std::stoi(ip_pool[i][1]) == 70) {
                 std::cout << ip_pool[i][0] << "." << ip_pool[i][1] << "." << ip_pool[i][2] << "." << ip_pool[i][3] << std::endl;
             }
         }
 
-        for (int i = 0; i < ip_pool.size(); i++)
+        for (size_t i = 0; i < ip_pool.size(); i++)
         {
-            for (int j = 0; j < 4; j++)
+            for (size_t j = 0; j < 4; j++)
             {
                 if (std::stoi(ip_pool[i][j]) == 46 ) {
                     std::cout << ip_pool[i][0] << "." << ip_pool[i][1] << "." << ip_pool[i][2] << "." << ip_pool[i][3] << std::endl;
